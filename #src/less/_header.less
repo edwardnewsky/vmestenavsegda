@@ -1,6 +1,7 @@
 @tablet-width: 768px;
 @desktop-width: 992px;
 
+// Фоновый рисунок для блока
 .page-header__wrapper {
     background-image: url("../img/header-bg--desktop.webp"), linear-gradient(180deg, rgba(57,40,39,1) 0%, rgba(132,68,27,1) 35%, rgba(151,131,32,1) 100%);
     background-repeat: no-repeat;
@@ -8,6 +9,7 @@
     background-position: center;
 }
 
+// Растягиваем высоту блока на весь экран
 .page-header {
     padding: 30px 15px;
     display: flex;
@@ -17,96 +19,100 @@
     
 }
 
+// Кнопка меню (бургер)
 .main-nav__toggle::before {
-  content: "";
-
-  position: absolute;
-  top: 13px;
-  left: 21px;
-
-  width: 25px;
-  height: 3px;
-
-  background-color: #ffffff;
-  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 21px;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
 }
 
+// Кнопки меню (бургер) + кнопка (звонок)
 .main-nav__btn {
-    // Удалить
-    font-size: 0;
-
+    position: absolute;
+    z-index: 11;
     width: 44px;
     height: 44px;
-
     border: 1px solid #fff;
     border-radius: 100%;
 }
 
-.main-nav__btn--right {
-    text-align: right;
+// Открытое меню (бургер)
+.main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+
+    background-color: #6a4d38;
 }
 
-.main-nav__btn--icon-phone {
-    background: ;
+// Изменяем порядок списка (лого наверх)
+.site-list__item-logo {
+    order: -1;
 }
 
-.page-header__logo {
-    list-style: none;
-}
-
+// Элементы списка
 .site-list {
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav__list {
     display: flex;
     flex-direction: column;
-
-    margin-top: 15px;
-    margin-bottom: 0;
-
-    list-style: none;
-
-    text-align: center;
-    z-index: 2;
+    align-items: center;
 }
 
-@media (min-width: @desktop-width) {
-    .site-list {
-        flex-direction: row;
-        margin-top: 70px;
 
-        // display: inline-block;
-    }
-}
 
-.site-list__item {
-    min-width: 120px;
-}
+// .site-list {
+//     display: flex;
+//     flex-direction: column;
+//     margin-top: 15px;
+//     margin-bottom: 0;
+//     list-style: none;
+//     text-align: center;
+//     z-index: 2;
+// }
 
-.site-list__link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    text-transform: uppercase;
-    display: block;
-}
+// @media (min-width: @desktop-width) {
+//     .site-list {
+//         flex-direction: row;
+//         margin-top: 70px;
 
-.main-nav__list--right {
-    justify-content: flex-end;
-}
+//         // display: inline-block;
+//     }
+// }
 
-// Удалить
-.fix {
-    text-align: center;
-}
-@media (min-width: @desktop-width) {
-    .fix {
-        position: absolute;
+// .site-list__item {
+//     min-width: 120px;
+// }
 
-        justify-content: space-between;
-    }
-}
+// .site-list__link {
+//     text-decoration: none;
+//     color: #fff;
+//     font-size: 18px;
+//     text-transform: uppercase;
+//     display: block;
+// }
+
+// .main-nav__list--right {
+//     justify-content: flex-end;
+// }
+
+// временно
 .bg {
     background: #000;
 }
 
+// ВООБЩЕ НЕ ИЗ ШАПКИ
 .header-offer {
     margin-top: 30px;
     text-align: center;
