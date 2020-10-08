@@ -2,18 +2,23 @@
 
       <nav class="main-nav">
 
-        <div class="row">
+        <div class="row d-lg-none">
           <div class="col-6 main-nav__btn--left">
-           <button class="main-nav__toggle main-nav__btn" type="button">Открыть меню</button>
+           <button class="main-nav__toggle main-nav__btn bg" type="button">Открыть меню</button>
           </div>
           <div class="col-6 main-nav__btn--right">
-           <button class="main-nav__btn main-nav__btn--icon" type="button">Позвонить нам</button>
+           <button class="main-nav__btn main-nav__btn--icon bg" type="button">Позвонить нам</button>
           </div>
         </div>
 
-        <div class="row">
-          <ul class="main-nav__list site-list">
+        <div class="row position-relative">
 
+          <!-- Исправить FIX -->
+          <div class="col-xs-12 fix">
+              <img class="page-header__logo bg" src="../img/-logo.png" width="170px" height="170px">
+          </div>
+
+          <ul class="main-nav__list main-nav__list--left site-list bg col-lg-6">
             <li class="site-list__item site-list__item--active">
               <a href="#">Кто мы</a>
             </li>
@@ -23,13 +28,9 @@
             <li class="site-list__item">
               <a href="#">Свидания</a>
             </li>
-<!-- Проверить класс site-list__item--logo-->
-            <li class="site-list__item site-list__item--logo">
-              <a href="#">
-                <img class="page-header__logo" src="../img/-logo.png" width="170px" height="170px">
-              </a>
-            </li>
+          </ul>
 
+           <ul class="main-nav__list main-nav__list--right site-list bg col-lg-6">
             <li class="site-list__item">
               <a href="#">Отзывы</a>
             </li>
@@ -39,12 +40,19 @@
             <li class="site-list__item">
               <a href="#">Контакты</a>
             </li>
-
           </ul>
 
-          <div class="col-12 ">
-              <img class="page-header__logo" src="../img/-logo.png" width="170px" height="170px">
-          </div>
+           <ul class="main-nav__list main-nav__list--xs site-list bg">
+            <li class="site-list__item d-lg-none">
+              <a href="#">+7(495)744-64-15</a>
+            </li>
+            <li class="site-list__item d-lg-none">
+              <a href="#">Адрес</a>
+            </li>
+            <li class="site-list__item d-lg-none">
+              <a href="#">пн-сб 10:00-22:00, вс-вых.</a>
+            </li>
+          </ul>
 
         </div>
       </nav>
