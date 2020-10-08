@@ -1,3 +1,19 @@
+.btn-primary {
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+.btn-primary--icon-heart::before {
+  content: "<3";
+  margin-right: 15px;
+}
+
+.page-header__wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, from(#392827), color-stop(35%, #84441b), to(#978320));
+  background: -o-linear-gradient(top, #392827 0%, #84441b 35%, #978320 100%);
+  background: linear-gradient(180deg, #392827 0%, #84441b 35%, #978320 100%);
+}
+
 .page-header {
   padding: 30px 15px;
   display: -webkit-box;
