@@ -1,5 +1,5 @@
 @tablet-width: 768px;
-@desktop-width: 1200px;
+@desktop-width: 992px;
 
 .page-header {
     padding-top: 30px;
@@ -26,11 +26,29 @@
 
 .site-list {
     display: flex;
+    flex-direction: column;
 
     margin-top: 15px;
     margin-bottom: 0;
+
     list-style: none;
+
     text-align: center;
+}
+
+@media (min-width: @desktop-width) {
+    .site-list {
+        flex-direction: row;
+        margin-top: 70px;
+    }
+}
+
+.site-list__item {
+    min-width: 120px;
+}
+
+.site-list__link {
+    display: block;
 }
 
 .main-nav__list--right {
@@ -45,9 +63,15 @@
 @media (min-width: @desktop-width) {
     .fix {
         position: absolute;
+
         justify-content: space-between;
     }
 }
 .bg {
     background: #000;
+}
+
+.page-header__offer {
+    margin-top: 120px;
+    text-align: center;
 }

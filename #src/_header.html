@@ -7,7 +7,9 @@
            <button class="main-nav__toggle main-nav__btn bg" type="button">Открыть меню</button>
           </div>
           <div class="col-6 main-nav__btn--right">
-           <button class="main-nav__btn main-nav__btn--icon bg" type="button">Позвонить нам</button>
+            <a href="#">
+            <button class="main-nav__btn main-nav__btn--icon bg" type="button">Позвонить нам</button>
+           </a>
           </div>
         </div>
 
@@ -18,42 +20,47 @@
               <img class="page-header__logo bg" src="../img/-logo.png" width="170px" height="170px">
           </div>
 
-          <ul class="main-nav__list main-nav__list--left site-list bg col-lg-6">
-            <li class="site-list__item site-list__item--active">
-              <a href="#">Кто мы</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Фото</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Свидания</a>
-            </li>
-          </ul>
+          <div>
+            <ul class="main-nav__list main-nav__list--left site-list bg col-lg-6">
+              <li class="site-list__item site-list__item--active">
+                <a class="site-list__link" href="#">Кто мы</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">Фото</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">Свидания</a>
+              </li>
+            </ul>
 
-           <ul class="main-nav__list main-nav__list--right site-list bg col-lg-6">
-            <li class="site-list__item">
-              <a href="#">Отзывы</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Партнеры</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
+             <ul class="main-nav__list main-nav__list--right site-list bg col-lg-6">
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">Отзывы</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">Партнеры</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">Контакты</a>
+              </li>
+            </ul>
 
-           <ul class="main-nav__list main-nav__list--xs site-list bg">
-            <li class="site-list__item d-lg-none">
-              <a href="#">+7(495)744-64-15</a>
-            </li>
-            <li class="site-list__item d-lg-none">
-              <a href="#">Адрес</a>
-            </li>
-            <li class="site-list__item d-lg-none">
-              <a href="#">пн-сб 10:00-22:00, вс-вых.</a>
-            </li>
-          </ul>
+             <ul class="main-nav__list main-nav__list--xs site-list bg">
+              <li class="site-list__item d-lg-none">
+                <a href="#">+7(495)744-64-15</a>
+              </li>
+              <li class="site-list__item d-lg-none">
+                <a href="#">Адрес</a>
+              </li>
+              <li class="site-list__item d-lg-none">
+                <a href="#">пн-сб 10:00-22:00, вс-вых.</a>
+              </li>
+            </ul>
+          </div>
 
         </div>
       </nav>
+
+      @@include('_header--offer.html')
+
     </header>
