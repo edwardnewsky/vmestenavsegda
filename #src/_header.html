@@ -4,12 +4,12 @@
       <nav class="main-nav">
 
         <div class="row d-lg-none">
-          <div class="col-6 main-nav__btn--left">
-           <button class="main-nav__toggle main-nav__btn bg" type="button">Открыть меню</button>
+          <div class="col-6 main-nav__btn--left position-relative">
+           <button class="main-nav__toggle main-nav__btn bg" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
           <div class="col-6 main-nav__btn--right">
             <a href="#">
-            <button class="main-nav__btn main-nav__btn--icon bg" type="button">Позвонить нам</button>
+            <button class="main-nav__btn main-nav__btn--icon-phone bg" type="button"><img src="../img/icon__phone.svg" width="30px" height="30px"><span class="visually-hidden">Позвонить нам</span></button>
            </a>
           </div>
         </div>
@@ -18,10 +18,10 @@
 
           <!-- Исправить FIX -->
           <div class="col-12 fix">
-              <img class="page-header__logo bg" src="../img/-logo.png" width="170px" height="170px">
+              <img class="page-header__logo bg" src="../img/logo-ru.svg" width="170px" height="170px" fill="#fff">
           </div>
 
-          <ul class="main-nav__list main-nav__list--left site-list col-lg-6 p-0 d-none d-lg-flex bg">
+          <ul class="main-nav__list main-nav__list--left site-list col-lg-5 p-0 d-none d-lg-flex bg">
             <li class="site-list__item site-list__item--active">
               <a class="site-list__link" href="#">Кто мы</a>
             </li>
@@ -33,7 +33,7 @@
             </li>
           </ul>
 
-           <ul class="main-nav__list main-nav__list--right site-list col-lg-6 p-0 d-none d-lg-flex bg">
+           <ul class="main-nav__list main-nav__list--right site-list col-lg-5 p-0 d-none d-lg-flex offset-lg-2 bg">
             <li class="site-list__item">
               <a class="site-list__link" href="#">Отзывы</a>
             </li>
@@ -61,20 +61,26 @@
       </nav>
 
       <div class="row">
-        <div class="page-header__offer col-12 bg">
-          <h1>Знакомства для серьезных отношений</h1>
-          <h2>Живые свидания в самом сердце Москвы</h2>
+        <div class="header-offer col-12 order-2 bg">
+          <h1 class="header-offer__h1">Знакомства для серьезных отношений</h1>
         </div>
 
-        <div class="page-header__offer col-12 bg">
+        <div class="header-offer col-12 order-1 bg">
+          <h2 class="header-offer__h2">
+            <span class="header-offer__h2--big">Живые свидания</span><br>
+            <span class="header-offer__h2--small">в самом сердце Москвы</span>
+          </h2>
+        </div>
+
+        <div class="header-offer col-12 order-3 bg">
           <button class="btn btn-primary btn-primary--icon-heart" type="button">Организовать свидание</button>
         </div>
       </div>
 
 
       <div class="row">
-        <div class="page-header__offer col-12 bg">
-          <button class="btn btn-primary" type="button">Перейти к контенту</button>
+        <div class="header-offer col-12 bg">
+          <button class="btn btn-primary" type="button">Подробнее</button>
         </div>
       </div>
 

@@ -2,7 +2,10 @@
 @desktop-width: 992px;
 
 .page-header__wrapper {
-    background: linear-gradient(180deg, rgba(57,40,39,1) 0%, rgba(132,68,27,1) 35%, rgba(151,131,32,1) 100%);
+    background-image: url("../img/header-bg--desktop.webp"), linear-gradient(180deg, rgba(57,40,39,1) 0%, rgba(132,68,27,1) 35%, rgba(151,131,32,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .page-header {
@@ -12,6 +15,20 @@
     justify-content: space-between;
     height: 100vh;
     
+}
+
+.main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  left: 21px;
+
+  width: 25px;
+  height: 3px;
+
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
 }
 
 .main-nav__btn {
@@ -29,6 +46,10 @@
     text-align: right;
 }
 
+.main-nav__btn--icon-phone {
+    background: ;
+}
+
 .page-header__logo {
     list-style: none;
 }
@@ -43,6 +64,7 @@
     list-style: none;
 
     text-align: center;
+    z-index: 2;
 }
 
 @media (min-width: @desktop-width) {
@@ -59,13 +81,16 @@
 }
 
 .site-list__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
     display: block;
 }
 
 .main-nav__list--right {
     justify-content: flex-end;
 }
-
 
 // Удалить
 .fix {
@@ -82,7 +107,25 @@
     background: #000;
 }
 
-.page-header__offer {
+.header-offer {
     margin-top: 30px;
     text-align: center;
+}
+
+.header-offer__h2 {
+    font-size: 29px;
+}
+.header-offer__h2--small {
+    font-size: 20px;
+}
+
+.header-offer__h1 {
+    font-size: 18px;
+}
+
+.btn-primary--icon-heart {
+    &::before {
+        content: "<3";
+        margin-right: 15px;
+    }
 }

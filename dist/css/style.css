@@ -3,15 +3,13 @@
   border-radius: 50px;
 }
 
-.btn-primary--icon-heart::before {
-  content: "<3";
-  margin-right: 15px;
-}
-
 .page-header__wrapper {
-  background: -webkit-gradient(linear, left top, left bottom, from(#392827), color-stop(35%, #84441b), to(#978320));
-  background: -o-linear-gradient(top, #392827 0%, #84441b 35%, #978320 100%);
-  background: linear-gradient(180deg, #392827 0%, #84441b 35%, #978320 100%);
+  background-image: url("../img/header-bg--desktop.webp"), -webkit-gradient(linear, left top, left bottom, from(#392827), color-stop(35%, #84441b), to(#978320));
+  background-image: url("../img/header-bg--desktop.webp"), -o-linear-gradient(top, #392827 0%, #84441b 35%, #978320 100%);
+  background-image: url("../img/header-bg--desktop.webp"), linear-gradient(180deg, #392827 0%, #84441b 35%, #978320 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .page-header {
@@ -29,6 +27,18 @@
   height: 100vh;
 }
 
+.main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 21px;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+          box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+}
+
 .main-nav__btn {
   font-size: 0;
   width: 44px;
@@ -39,6 +49,10 @@
 
 .main-nav__btn--right {
   text-align: right;
+}
+
+.main-nav__btn--icon-phone {
+  background: ;
 }
 
 .page-header__logo {
@@ -57,6 +71,7 @@
   margin-bottom: 0;
   list-style: none;
   text-align: center;
+  z-index: 2;
 }
 
 .site-list__item {
@@ -64,6 +79,10 @@
 }
 
 .site-list__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
   display: block;
 }
 
@@ -81,9 +100,26 @@
   background: #000;
 }
 
-.page-header__offer {
+.header-offer {
   margin-top: 30px;
   text-align: center;
+}
+
+.header-offer__h2 {
+  font-size: 29px;
+}
+
+.header-offer__h2--small {
+  font-size: 20px;
+}
+
+.header-offer__h1 {
+  font-size: 18px;
+}
+
+.btn-primary--icon-heart::before {
+  content: "<3";
+  margin-right: 15px;
 }
 
 @media (min-width: 992px) {
