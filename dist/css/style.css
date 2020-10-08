@@ -1,9 +1,12 @@
-.page-header__logo {
+.site-list__item--logo {
   position: absolute;
-  top: 20px;
-  left: 35px;
-  background: #000;
+  top: 30px;
+  left: 25%;
+}
+
+.page-header__logo {
   list-style: none;
+  background: #000;
 }
 
 .main-nav__btn {
@@ -17,6 +20,12 @@
 
 .main-nav__btn--right {
   text-align: right;
+}
+
+.site-list {
+  margin-top: 170px;
+  list-style: none;
+  text-align: center;
 }
 @supports (-webkit-appearance:none){
 
