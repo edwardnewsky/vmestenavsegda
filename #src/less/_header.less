@@ -17,7 +17,8 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    
+    // Для закрепления меню бургера и кнопки звонка
+    position: relative;
 }
 
 // Кнопка меню (бургер)
@@ -44,7 +45,7 @@
 
 // Открытое меню (бургер)
 .main-nav--opened .main-nav__wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -54,8 +55,12 @@
     background-color: #6a4d38;
 }
 
+.main-nav--closed .main-nav__wrapper {
+    display: none;
+}
+
 .main-nav__btn--call {
-    right: 30px;
+    right: 0;
 }
 
 // Изменяем порядок списка (лого наверх)
@@ -67,14 +72,10 @@
 .site-list {
     list-style: none;
     padding: 0;
-}
-
-.main-nav__list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 
 
 // .site-list {

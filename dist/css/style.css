@@ -25,6 +25,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100vh;
+  position: relative;
 }
 
 .main-nav__btn--menu::before {
@@ -49,7 +50,7 @@
 }
 
 .main-nav--opened .main-nav__wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
@@ -58,8 +59,12 @@
   background-color: #6a4d38;
 }
 
+.main-nav--closed .main-nav__wrapper {
+  display: none;
+}
+
 .main-nav__btn--call {
-  right: 30px;
+  right: 0;
 }
 
 .site-list__item-logo {
@@ -71,9 +76,6 @@
 .site-list {
   list-style: none;
   padding: 0;
-}
-
-.main-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
