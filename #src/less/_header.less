@@ -1,6 +1,6 @@
 // Переменные (вынести в отдельный файл)
 @tablet-width: 768px;
-@desktop-width: 992px;
+@desktop-width: 960px;
 
 // Фоновый рисунок + градиент (на всякий) для блока
 .page-header__wrapper {
@@ -8,6 +8,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    // Накладываем на фон дополнительный цвет + прозрачность
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #2f2f36;
+        opacity: 0.5;
+    }
 }
 
 // Растягиваем высоту блока на весь экран
@@ -21,8 +33,25 @@
     position: relative;
 }
 
+// Кнопка меню (бургер) + кнопка (звонок)
+.main-nav__btn {
+    position: absolute;
+    z-index: 11;
+    width: 44px;
+    height: 44px;
+    border: 0px;
+    border-radius: 100%;
+    background-color: #091D23;
+}
+
+ @media (min-width: @desktop-width) {
+    .main-nav__btn {
+        display: none;
+    }
+}
+
 // Кнопка меню (бургер)
-.main-nav__btn--menu::before {
+.main-nav__btn--menu::before { 
     content: "";
     position: absolute;
     top: 12px;
@@ -31,16 +60,6 @@
     height: 3px;
     background-color: #ffffff;
     box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
-}
-
-// Кнопка меню (бургер) + кнопка (звонок)
-.main-nav__btn {
-    position: absolute;
-    z-index: 11;
-    width: 44px;
-    height: 44px;
-    border: 1px solid #fff;
-    border-radius: 100%;
 }
 
 // Открытое меню (бургер)
@@ -55,26 +74,69 @@
     background-color: #6a4d38;
 }
 
+// Скрываем меню по умолчанию на мобильном
 .main-nav--closed .main-nav__wrapper {
     display: none;
 }
+// Открываем меню по умолчанию на десктопе
+ @media (min-width: @desktop-width) {
+    .main-nav--closed .main-nav__wrapper {
+        display: block;
+    }
+}
 
+// Кнопка звонок
 .main-nav__btn--call {
     right: 0;
+}
+
+// Элементы списка
+.site-list {
+    text-transform: uppercase;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+// Убираем отступ сверху на десктопе
+ @media (min-width: @desktop-width) {
+    .site-list {
+        padding-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+// Расширяем list-link на всю ширину
+.site-list__link {
+    text-decoration: none;
+    width: 100%;
+    color: #fff;
+}
+
+
+// Задаем жадность list-item на десктопе
+ @media (min-width: @desktop-width) {
+    .site-list__item {
+        flex-grow: 1;
+        text-align: center;
+    }
 }
 
 // Изменяем порядок списка (лого наверх)
 .site-list__item-logo {
     order: -1;
 }
-
-// Элементы списка
-.site-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+// Возвращяем лого на место на десктопе
+ @media (min-width: @desktop-width) {
+    .site-list__item-logo {
+        order: unset;
+        flex-grow: 3;
+        text-align: center;
+    }
 }
 
 
