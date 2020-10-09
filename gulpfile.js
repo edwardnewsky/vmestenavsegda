@@ -14,7 +14,7 @@ let path={
     css: source_folder + "/less/style.less",
     js: source_folder + "/js/script.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-    fonts: source_folder + "/fonts/*.ttf",
+    fonts: source_folder + "/fonts/*.{ttf,woff}",
   },
   watch:{
     html: source_folder + "/**/*.html",

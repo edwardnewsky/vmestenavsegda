@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: normal;
+  src: local('ProximaNova'), url('../fonts/ProximaNova-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: bold;
+  src: local('ProximaNova'), url('../fonts/ProximaNova-Bold.woff') format('woff');
+}
+
+body {
+  font-family: "ProximaNova";
+}
+
 .btn-primary {
   background-color: transparent;
   border-radius: 50px;
