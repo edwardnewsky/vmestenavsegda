@@ -1,4 +1,4 @@
-// Переменные (вынести в отдельный файл)
+    // Переменные (вынести в отдельный файл)
 @iphone-6: 369px;
 @iphone-6-plus: 414px;
 @iphone-plus: 540px;
@@ -107,7 +107,7 @@ body {
     // Для закрепления меню бургера и кнопки звонка
     // position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 // Скрываем кнопки для мобильного на десктопе
 @media (min-width: @desktop-width) {
@@ -118,7 +118,7 @@ body {
 
 // Кнопка меню (бургер) + кнопка (звонок)
 .main-nav__btn {
-    position: relative;
+    position: fixed;
     z-index: 11;
 
     width: 44px;
@@ -136,6 +136,10 @@ body {
 // }
 
 // Кнопка меню (бургер)
+.main-nav__btn--menu {
+    left: 15px;
+}
+
 .main-nav__btn--menu::before {
     position: absolute;
     top: 12px;
@@ -176,7 +180,7 @@ body {
 
 // Кнопка звонок
 .main-nav__btn--call {
-    // right: 15px;
+    right: 15px;
 }
 
 // Элементы списка

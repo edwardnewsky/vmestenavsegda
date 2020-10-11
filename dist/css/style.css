@@ -74,19 +74,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-nav__btn {
-  position: relative;
+  position: fixed;
   z-index: 11;
   width: 44px;
   height: 44px;
   border: 0;
   border-radius: 100%;
   background-color: #091d23;
+}
+
+.main-nav__btn--menu {
+  left: 15px;
 }
 
 .main-nav__btn--menu::before {
@@ -113,6 +117,10 @@ body {
 
 .main-nav--closed .main-nav__wrapper {
   display: none;
+}
+
+.main-nav__btn--call {
+  right: 15px;
 }
 
 .site-list {
