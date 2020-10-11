@@ -1,20 +1,20 @@
 	<header class="page-header">
     <nav class="main-nav main-nav--closed container">
-      <button class="main-nav__btn main-nav__btn--menu" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <a href="#">
-        <button class="main-nav__btn main-nav__btn--call" type="button">
-          <!-- Вставить через спрайт -->
-          <img src="../img/icon__phone.svg" width="23px" height="23px">
-          <span class="visually-hidden">Позвонить в компанию «Вместе навсегда»</span>
+      <div class="main-nav--mobile">
+        <button class="main-nav__btn main-nav__btn--menu" type="button">
+          <span class="visually-hidden">Открыть меню</span>
         </button>
-      </a>
-      <div class="">
+        <a class="main-nav__logo" href="#">
+            <svg class="site-list__item-logo--svg" width="150px" height="150px">
+              <use xlink:href="#logo-ru"></use>
+            </svg>
+        </a>
         <a href="#">
-          <svg width="150px" height="150px">
-            <use xlink:href="#logo-ru"></use>
-          </svg>
+          <button class="main-nav__btn main-nav__btn--call" type="button">
+            <!-- Вставить через спрайт -->
+            <img src="../img/icon__phone.svg" width="23px" height="23px">
+            <span class="visually-hidden">Позвонить в компанию «Вместе навсегда»</span>
+          </button>
         </a>
       </div>
       <div class="main-nav__wrapper">

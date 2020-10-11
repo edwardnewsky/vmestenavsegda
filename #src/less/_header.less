@@ -1,8 +1,15 @@
 // Переменные (вынести в отдельный файл)
-@tablet-width: 768px;
+@iphone-6: 369px;
+@iphone-6-plus: 414px;
+@iphone-plus: 540px;
+@ipad: 768px;
 @desktop-width: 960px;
 
-// Фоновый рисунок + градиент (на всякий) для блока
+body {
+    min-width: 319px;
+}
+
+// Фоновый рисунок + градиент для блока
 .page-header__wrapper {
     // Растягиваем высоту блока на весь экран
     height: 100vh;
@@ -38,12 +45,12 @@
     }
 }
 
-// Стилизация чего то
+// Стилизация расположения эл-ов внутри хедера
 .page-header {
     display: flex;
     flex-direction: column;
 
-    padding: 30px 15px;
+    padding-top: 30px;
 
     justify-content: space-between;
 }
@@ -56,13 +63,62 @@
 }
 
 .main-nav {
+    padding: 0;
+}
+@media (min-width: @desktop-width) {
+    .main-nav {
+        padding: 0 15px;
+    }
+}
+
+// Лого сайта
+#logo-ru {
+    fill: #fff;
+}
+// // Лого текст
+// .logo-ru-- {
+// }
+// // Лого обводка (ветки)
+// .logo-ru-- {
+// }
+
+// Изменяем размер логотипа для медиа
+@media (min-width: @iphone-6) {
+  .site-list__item-logo--svg {
+    height: 170px;
+    width: 170px;
+  } 
+}
+@media (min-width: @iphone-6-plus) {
+  .site-list__item-logo--svg {
+    height: 200px;
+    width: 200px;
+  } 
+}
+@media (min-width: @iphone-plus) {
+  .site-list__item-logo--svg {
+    height: 250px;
+    width: 250px;
+  } 
+}
+
+
+.main-nav--mobile {
     // Для закрепления меню бургера и кнопки звонка
-    position: relative;
+    // position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+// Скрываем кнопки для мобильного на десктопе
+@media (min-width: @desktop-width) {
+    .main-nav--mobile {
+        display: none;
+    }
 }
 
 // Кнопка меню (бургер) + кнопка (звонок)
 .main-nav__btn {
-    position: absolute;
+    position: relative;
     z-index: 11;
 
     width: 44px;
@@ -73,11 +129,11 @@
     background-color: #091d23;
 }
 
-@media (min-width: @desktop-width) {
-    .main-nav__btn {
-        display: none;
-    }
-}
+// @media (min-width: @desktop-width) {
+//     .main-nav__btn {
+//         display: none;
+//     }
+// }
 
 // Кнопка меню (бургер)
 .main-nav__btn--menu::before {
@@ -120,7 +176,7 @@
 
 // Кнопка звонок
 .main-nav__btn--call {
-    right: 15px;
+    // right: 15px;
 }
 
 // Элементы списка
@@ -174,6 +230,7 @@
 
 // Изменяем порядок списка (лого наверх)
 .site-list__item-logo {
+    padding-top: 0;
     order: -1;
 }
 // Возвращяем лого на место на десктопе
@@ -186,16 +243,7 @@
     }
 }
 
-// Лого сайта
-#logo-ru {
-    fill: #fff;
-}
-// // Лого текст
-// .logo-ru-- {
-// }
-// // Лого обводка (ветки)
-// .logo-ru-- {
-// }
+
 
 // временно
 .bg {
