@@ -2,6 +2,7 @@
   font-family: 'ProximaNova';
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local('ProximaNova'), url('../fonts/ProximaNova-Regular.woff') format('woff');
 }
 
@@ -9,6 +10,7 @@
   font-family: 'ProximaNova';
   font-style: normal;
   font-weight: bold;
+  font-display: swap;
   src: local('ProximaNova'), url('../fonts/ProximaNova-Bold.woff') format('woff');
 }
 
@@ -22,9 +24,9 @@ body {
 }
 
 .page-header__wrapper {
-  background-image: url("../img/header-bg--desktop.webp"), -webkit-gradient(linear, left top, left bottom, from(#392827), color-stop(35%, #84441b), to(#978320));
-  background-image: url("../img/header-bg--desktop.webp"), -o-linear-gradient(top, #392827 0%, #84441b 35%, #978320 100%);
-  background-image: url("../img/header-bg--desktop.webp"), linear-gradient(180deg, #392827 0%, #84441b 35%, #978320 100%);
+  background-image: url("../img/header-bg--desktop.jpeg"), -webkit-gradient(linear, left top, left bottom, from(#392827), color-stop(35%, #84441b), to(#978320));
+  background-image: url("../img/header-bg--desktop.jpeg"), -o-linear-gradient(top, #392827 0%, #84441b 35%, #978320 100%);
+  background-image: url("../img/header-bg--desktop.jpeg"), linear-gradient(180deg, #392827 0%, #84441b 35%, #978320 100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -71,7 +73,7 @@ body {
   content: "";
   position: absolute;
   top: 12px;
-  left: 8px;
+  left: 10px;
   width: 25px;
   height: 3px;
   background-color: #ffffff;
@@ -86,7 +88,7 @@ body {
   z-index: 10;
   height: 100%;
   width: 100%;
-  background-color: #6a4d38;
+  background-color: #000;
 }
 
 .main-nav--closed .main-nav__wrapper {
@@ -124,6 +126,10 @@ body {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+}
+
+#logo-ru {
+  fill: #fff;
 }
 
 .bg {
@@ -193,7 +199,9 @@ body {
   }
 }
 @supports (-webkit-appearance:none){
-
+.page-header__wrapper{background-image:url("../img/header-bg--desktop.webp"), -webkit-gradient(linear, left top, left bottom, from(#392827), color-stop(35%, #84441b), to(#978320))}
+.page-header__wrapper{background-image:url("../img/header-bg--desktop.webp"), -o-linear-gradient(top, #392827 0%, #84441b 35%, #978320 100%)}
+.page-header__wrapper{background-image:url("../img/header-bg--desktop.webp"), linear-gradient(180deg, #392827 0%, #84441b 35%, #978320 100%)}
 }
 
  @media (min-width: 960px){
