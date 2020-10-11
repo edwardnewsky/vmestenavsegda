@@ -11,8 +11,11 @@
 
   </head>
   <body>
-    @@include('_header.html')
-    @@include('_header--logo-svg.html')
+    <div class="container-fluid page-header__wrapper">
+      @@include('_header.html')
+      @@include('_header--offer.html')
+    </div>
+      @@include('_header--logo-svg.html')
     <main class="page-main">
       @@include('_advantages.html')
     </main>  

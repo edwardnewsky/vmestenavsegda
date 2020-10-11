@@ -4,31 +4,54 @@
 
 // Фоновый рисунок + градиент (на всякий) для блока
 .page-header__wrapper {
-    background-image: url("../img/header-bg--desktop.jpeg"), linear-gradient(180deg, rgba(57,40,39,1) 0%, rgba(132,68,27,1) 35%, rgba(151,131,32,1) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    // Растягиваем высоту блока на весь экран
+    height: 100vh;
 
-    // Накладываем на фон дополнительный цвет + прозрачность
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #2f2f36;
-        opacity: 0.5;
+    background-image: url('../img/header-bg--desktop.jpeg'), linear-gradient(180deg, rgba(57,40,39,1) 0%, rgba(132,68,27,1) 35%, rgba(151,131,32,1) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    // Накладываем на фон дополнительный цвет + прозрачность (не работает)
+    // &::after {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+
+    //     width: 100%;
+    //     height: 100%;
+
+    //     content: '';
+
+    //     opacity: .5;
+    //     background: #2f2f36;
+    // }
+}
+// Растягиваем container-fluid на десктопе
+@media (min-width: @desktop-width) {
+    .page-header__wrapper {
+        padding: 0;
     }
 }
 
-// Растягиваем высоту блока на весь экран
+// Стилизация чего то
 .page-header {
-    padding: 30px 15px;
     display: flex;
     flex-direction: column;
+
+    padding: 30px 15px;
+
     justify-content: space-between;
-    height: 100vh;
+}
+@media (min-width: @desktop-width) {
+    // Цвет background меню для десктопа
+    .page-header {
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,.1) 80%, rgba(0,0,0,0) 100%);
+    }
+}
+
+.main-nav {
     // Для закрепления меню бургера и кнопки звонка
     position: relative;
 }
@@ -37,39 +60,45 @@
 .main-nav__btn {
     position: absolute;
     z-index: 11;
+
     width: 44px;
     height: 44px;
-    border: 0px;
+
+    border: 0;
     border-radius: 100%;
-    background-color: #091D23;
+    background-color: #091d23;
 }
 
- @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
     .main-nav__btn {
         display: none;
     }
 }
 
 // Кнопка меню (бургер)
-.main-nav__btn--menu::before { 
-    content: "";
+.main-nav__btn--menu::before {
     position: absolute;
     top: 12px;
     left: 10px;
+
     width: 25px;
     height: 3px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+
+    content: '';
+
+    background-color: #fff;
+    box-shadow: 0 8px 0 0 #fff, 0 16px 0 0 #fff;
 }
 
 // Открытое меню (бургер)
 .main-nav--opened .main-nav__wrapper {
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
-    z-index: 10;
-    height: 100%;
+
     width: 100%;
+    height: 100%;
 
     background-color: #000;
 }
@@ -79,7 +108,7 @@
     display: none;
 }
 // Открываем меню по умолчанию на десктопе
- @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
     .main-nav--closed .main-nav__wrapper {
         display: block;
     }
@@ -87,42 +116,55 @@
 
 // Кнопка звонок
 .main-nav__btn--call {
-    right: 0;
+    right: 15px;
 }
 
 // Элементы списка
 .site-list {
-    text-transform: uppercase;
-    list-style: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    padding: 0;
     padding-top: 30px;
+
+    list-style: none;
+
+    text-transform: uppercase;
+
+    align-items: center;
 }
 // Убираем отступ сверху на десктопе
- @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
     .site-list {
-        padding-top: 0;
         display: flex;
         flex-direction: row;
+
+        padding-top: 0;
+
         justify-content: space-between;
     }
 }
 
 // Расширяем list-link на всю ширину
 .site-list__link {
-    text-decoration: none;
     width: 100%;
+
+    text-decoration: none;
+
     color: #fff;
 }
 
-
+.site-list__item {
+    padding: 15px 0;
+}
 // Задаем жадность list-item на десктопе
- @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
     .site-list__item {
-        flex-grow: 1;
+        padding: 0 0;
+
         text-align: center;
+
+        flex-grow: 1;
     }
 }
 
@@ -131,11 +173,12 @@
     order: -1;
 }
 // Возвращяем лого на место на десктопе
- @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
     .site-list__item-logo {
+        text-align: center;
+
         order: unset;
         flex-grow: 3;
-        text-align: center;
     }
 }
 
@@ -144,37 +187,13 @@
     fill: #fff;
 }
 // // Лого текст
-// .logo-ru--text {
+// .logo-ru-- {
 // }
 // // Лого обводка (ветки)
-// .logo-ru--border {
+// .logo-ru-- {
 // }
 
 // временно
 .bg {
     background: #000;
-}
-
-// ВООБЩЕ НЕ ИЗ ШАПКИ
-.header-offer {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.header-offer__h2 {
-    font-size: 29px;
-}
-.header-offer__h2--small {
-    font-size: 20px;
-}
-
-.header-offer__h1 {
-    font-size: 18px;
-}
-
-.btn-primary--icon-heart {
-    &::before {
-        content: "<3";
-        margin-right: 15px;
-    }
 }
