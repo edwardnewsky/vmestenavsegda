@@ -1,0 +1,18 @@
+// Выравниваем блок по центру
+.head-col {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.head-title {
+	// Вставляем ветки
+	&::before,
+	&::after {
+		content: url("../img/icon__phone.svg");
+	}
+	&::after {
+		// Не работает
+		// transform: scaleX(-1);
+	}
+}

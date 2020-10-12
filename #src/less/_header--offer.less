@@ -40,13 +40,29 @@
 	}
 }
 
-
+// Нижний текст
 .header-offer__h1 {
-    font-size: 18px;
+    font-size: 17px;
 
     margin-top: 30px;
     margin-bottom: 30px;
 }
+@media (min-width: @iphone-6) {
+	.header-offer__h1 {
+	    // font-size: 32px;
+	}
+}
+@media (min-width: @iphone-plus) {
+	.header-offer__h1 {
+	    font-size: 26px;
+	}
+}
+@media (min-width: @ipad) {
+	.header-offer__h1 {
+	    font-size: 32px;
+	}
+}
+
 // Кнопка "Организовать свидание"
 .btn-primary--icon-heart {
     &::before {

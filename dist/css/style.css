@@ -22,6 +22,14 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   border-color: #fff;
+  padding: 10px 30px;
+}
+
+.btn-primary:hover {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 body {
@@ -179,7 +187,7 @@ body {
 }
 
 .header-offer__h1 {
-  font-size: 18px;
+  font-size: 17px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -191,6 +199,24 @@ body {
 
 .btn-primary--icon-down::before {
   content: '»';
+}
+
+.head-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.head-title::before,
+.head-title::after {
+  content: url("../img/icon__phone.svg");
 }
 
 @media (min-width: 369px) {
@@ -228,6 +254,10 @@ body {
   .header-offer__h2--small {
     font-size: 35px;
   }
+
+  .header-offer__h1 {
+    font-size: 26px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -237,6 +267,10 @@ body {
 
   .header-offer__h2--small {
     font-size: 50px;
+  }
+
+  .header-offer__h1 {
+    font-size: 32px;
   }
 }
 
