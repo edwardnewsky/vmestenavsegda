@@ -258,6 +258,10 @@ body {
     height: 200px;
     width: 200px;
   }
+
+  .adventages__sub-title {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 540px) {
