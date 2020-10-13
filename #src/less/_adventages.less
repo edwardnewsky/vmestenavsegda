@@ -1,3 +1,22 @@
+.adventages__wrapper {
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(180deg, rgba(122,92,106,1) 0%, rgba(160,130,147,0.5) 50%, rgba(255,255,255,1) 100%);;
+}
+
+// Видео background
+.adventages__video {
+	z-index: -2;
+	object-fit: cover;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -35%;
+	// background-color: #9B8092;
+	// opacity: 0.3;
+	
+}
+
 // Внутрение отступы для заголовка
 .head-row {
 	padding-top: 30px;
@@ -12,6 +31,7 @@
 }
 
 .head-title {
+	color: #fff;
 	font-size: 27px;
 	font-weight: bold;
 }
@@ -36,13 +56,20 @@
 .adventages__col {
 	text-align: center;
 	padding: 0 10px;
+	padding-bottom: 30px;
 }
 
+// Цвет иконок
+.adventages__icon {
+	fill: #fff;
+}
+
+// Текст иконок
 .adventages__sub-title {
+	color: #fff;
 	font-size: 13px;
 	padding: 15px 0px;
 }
-
 @media (min-width: @iphone-6) {
 	.adventages__sub-title {
 		font-size: 15px;

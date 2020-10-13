@@ -8,6 +8,7 @@ let path={
     js: project_folder + "/js/",
     img: project_folder + "/img/",
     fonts: project_folder + "/fonts/",
+    video: project_folder + "/video/",
   },
   src:{
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -15,12 +16,14 @@ let path={
     js: source_folder + "/js/script.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.{ttf,woff}",
+    video: source_folder + "/video/*.mp4",
   },
   watch:{
     html: source_folder + "/**/*.html",
     css: source_folder + "/less/**/*.less",
     js: source_folder + "/js/**/*.js",
-    img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
+    img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+    video: source_folder + "/video/*.mp4"
   },
   clean:"./" + project_folder + "/"
 }
@@ -136,6 +139,11 @@ function fonts() {
     .pipe(dest(path.build.fonts))
 }
 
+function video() {
+  return src(path.src.video)
+    .pipe(dest(path.build.video))
+}
+
 // Generate ttf from otf
 gulp.task('otf2ttf', function () {
   return src([source_folder + '/fonts/*.otf'])
@@ -171,9 +179,10 @@ function clean(param) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, video));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.video = video;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
