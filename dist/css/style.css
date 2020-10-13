@@ -22,7 +22,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   border-color: #fff;
-  padding: 10px 30px;
+  padding: 10px 29px;
 }
 
 .btn-primary:hover {
@@ -201,6 +201,11 @@ body {
   content: '»';
 }
 
+.head-row {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
 .head-col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,9 +219,19 @@ body {
           justify-content: center;
 }
 
-.head-title::before,
-.head-title::after {
-  content: url("../img/icon__phone.svg");
+.head-title {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.adventages__col {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.adventages__sub-title {
+  font-size: 13px;
+  padding: 15px 0px;
 }
 
 @media (min-width: 369px) {
@@ -231,6 +246,10 @@ body {
 
   .header-offer__h2--small {
     font-size: 23px;
+  }
+
+  .adventages__sub-title {
+    font-size: 15px;
   }
 }
 
@@ -258,6 +277,10 @@ body {
   .header-offer__h1 {
     font-size: 26px;
   }
+
+  .adventages__sub-title {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -271,6 +294,10 @@ body {
 
   .header-offer__h1 {
     font-size: 32px;
+  }
+
+  .adventages__sub-title {
+    font-size: 20px;
   }
 }
 
@@ -328,6 +355,10 @@ body {
     -webkit-box-flex: 3;
         -ms-flex-positive: 3;
             flex-grow: 3;
+  }
+
+  .adventages__sub-title {
+    font-size: 20px;
   }
 }
 @supports (-webkit-appearance:none){

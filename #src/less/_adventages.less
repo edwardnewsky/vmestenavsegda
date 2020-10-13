@@ -1,3 +1,9 @@
+// Внутрение отступы для заголовка
+.head-row {
+	padding-top: 30px;
+	padding-bottom: 15px;
+}
+
 // Выравниваем блок по центру
 .head-col {
 	display: flex;
@@ -6,13 +12,56 @@
 }
 
 .head-title {
-	// Вставляем ветки
-	&::before,
-	&::after {
-		content: url("../img/icon__phone.svg");
+	font-size: 27px;
+	font-weight: bold;
+}
+
+// .head-title {
+// 	// Вставляем ветки
+// 	&::before,
+// 	&::after {
+// 		// content: url("../img/icon__phone.svg");
+// 		content: "Ветка";
+// 	}
+// 	&::after {
+// 		padding-left: 30px;
+// 		// Не работает
+// 		// transform: scaleX(-1);
+// 	}
+// 	&::before {
+// 		padding-right: 30px;
+// 	}
+// }
+
+.adventages__col {
+	text-align: center;
+	padding: 0 10px;
+}
+
+.adventages__sub-title {
+	font-size: 13px;
+	// padding-top: 15px;
+	// padding-bottom: 15px;
+	padding: 15px 0px;
+}
+
+@media (min-width: @iphone-6) {
+	.adventages__sub-title {
+		font-size: 15px;
 	}
-	&::after {
-		// Не работает
-		// transform: scaleX(-1);
+}
+@media (min-width: @iphone-plus) {
+	.adventages__sub-title {
+		font-size: 20px;
+	}
+}
+@media (min-width: @ipad) {
+	.adventages__sub-title {
+		font-size: 20px;
+	}
+}
+@media (min-width: @desktop-width) {
+	.adventages__sub-title {
+		font-size: 20px;
 	}
 }
