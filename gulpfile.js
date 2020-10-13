@@ -151,13 +151,13 @@ gulp.task('svgSprite', function () {
     .pipe(svgSprite({
       mode: {
         stack: {
-          sprite: "../icons/icons.svg",
-          example: true
+          sprite: "../_sprite.html",
+          // example: true
         }
       },
     }
     ))
-    .pipe(dest(path.build.img))
+    .pipe(dest([source_folder]))
 })
 
 function watchFiles(param) {

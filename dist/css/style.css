@@ -260,7 +260,7 @@ body {
   }
 
   .adventages__sub-title {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 
@@ -298,10 +298,6 @@ body {
 
   .header-offer__h1 {
     font-size: 32px;
-  }
-
-  .adventages__sub-title {
-    font-size: 20px;
   }
 }
 
@@ -359,10 +355,6 @@ body {
     -webkit-box-flex: 3;
         -ms-flex-positive: 3;
             flex-grow: 3;
-  }
-
-  .adventages__sub-title {
-    font-size: 20px;
   }
 }
 @supports (-webkit-appearance:none){
