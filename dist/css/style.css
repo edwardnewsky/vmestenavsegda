@@ -57,18 +57,19 @@ body {
 }
 
 .page-header__wrapper::after {
-  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   content: '';
-  opacity: 0.5;
-  background: #2f2f36;
+  background: -webkit-gradient(linear, left bottom, left top, from(#7a5c6a), color-stop(10%, rgba(147, 128, 138, 0.3)), to(rgba(0, 0, 0, 0.5)));
+  background: -o-linear-gradient(bottom, #7a5c6a 0%, rgba(147, 128, 138, 0.3) 10%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(0deg, #7a5c6a 0%, rgba(147, 128, 138, 0.3) 10%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .page-header {
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,6 +84,7 @@ body {
 }
 
 .main-nav {
+  z-index: 1;
   padding: 0;
 }
 
@@ -106,7 +108,7 @@ body {
   height: 44px;
   border: 0;
   border-radius: 100%;
-  background-color: #091d23;
+  background-color: #ABABAB;
 }
 
 .main-nav__btn--menu {
@@ -135,12 +137,20 @@ body {
   background-color: #000;
 }
 
+.main-nav--opened .header-offer__container {
+  z-index: -4;
+}
+
 .main-nav--closed .main-nav__wrapper {
   display: none;
 }
 
 .main-nav__btn--call {
   right: 15px;
+}
+
+.icon__phone {
+  fill: #fff;
 }
 
 .site-list {
@@ -186,6 +196,10 @@ body {
   color: #fff;
 }
 
+.header-offer__container--close {
+  z-index: 1;
+}
+
 .header-offer__h2 {
   font-weight: bold;
   text-transform: uppercase;
@@ -216,9 +230,9 @@ body {
 .adventages__wrapper {
   position: relative;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#7a5c6a), color-stop(50%, rgba(160, 130, 147, 0.5)), to(#ffffff));
-  background: -o-linear-gradient(top, #7a5c6a 0%, rgba(160, 130, 147, 0.5) 50%, #ffffff 100%);
-  background: linear-gradient(180deg, #7a5c6a 0%, rgba(160, 130, 147, 0.5) 50%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#7a5c6a), color-stop(20%, rgba(0, 0, 0, 0.8)), color-stop(85%, rgba(0, 0, 0, 0.7)), color-stop(90%, rgba(0, 0, 0, 0.5)), to(rgba(255, 255, 255, 0.9)));
+  background: -o-linear-gradient(top, #7a5c6a 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.7) 85%, rgba(0, 0, 0, 0.5) 90%, rgba(255, 255, 255, 0.9) 100%);
+  background: linear-gradient(180deg, #7a5c6a 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.7) 85%, rgba(0, 0, 0, 0.5) 90%, rgba(255, 255, 255, 0.9) 100%);
 }
 
 .adventages__video {
@@ -226,9 +240,15 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
-  left: -35%;
+  left: 0;
+}
+
+.adventages__container {
+  padding-top: 30px;
+  padding-bottom: 15px;
 }
 
 .head-row {
