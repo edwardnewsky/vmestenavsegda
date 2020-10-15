@@ -33,7 +33,11 @@ body {
 }
 
 body {
-  min-width: 319px;
+  min-width: 320px;
+}
+
+.bg {
+  background: #000;
 }
 
 .page-header__wrapper {
@@ -187,10 +191,6 @@ body {
           order: -1;
 }
 
-.bg {
-  background: #000;
-}
-
 .header-offer {
   text-align: center;
   color: #fff;
@@ -223,8 +223,8 @@ body {
   content: '<3';
 }
 
-.btn-primary--icon-down::before {
-  content: '»';
+.icon__arrow {
+  fill: #fff;
 }
 
 .adventages__wrapper {
@@ -247,7 +247,7 @@ body {
 }
 
 .adventages__container {
-  padding-top: 30px;
+  padding-top: 60px;
   padding-bottom: 15px;
 }
 
