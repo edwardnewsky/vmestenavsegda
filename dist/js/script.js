@@ -9,13 +9,13 @@ navBtn.addEventListener('click', function() {
 	if (navMain.classList.contains('main-nav--closed')) {
 		navMain.classList.remove('main-nav--closed');
 		navMain.classList.add('main-nav--opened');
-		fixZindex1.classList.remove('header-offer__container--close');
-		fixZindex2.classList.remove('header-offer__container--close');
+		// fixZindex1.classList.remove('header-offer__container--close');
+		// fixZindex2.classList.remove('header-offer__container--close');
 	} else {
 		navMain.classList.add('main-nav--closed');
 		navMain.classList.remove('main-nav--opened');
-		fixZindex1.classList.add('header-offer__container--close');
-		fixZindex2.classList.add('header-offer__container--close');
+		// fixZindex1.classList.add('header-offer__container--close');
+		// fixZindex2.classList.add('header-offer__container--close');
 	}
 });
 
