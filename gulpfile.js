@@ -16,14 +16,14 @@ let path={
     js: source_folder + "/js/script.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.{ttf,woff}",
-    video: source_folder + "/video/*.mp4",
+    video: source_folder + "/video/*.{mp4,webm}",
   },
   watch:{
     html: source_folder + "/**/*.html",
     css: source_folder + "/less/**/*.less",
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-    video: source_folder + "/video/*.mp4"
+    video: source_folder + "/video/*.{mp4,webm}"
   },
   clean:"./" + project_folder + "/"
 }

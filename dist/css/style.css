@@ -1,3 +1,91 @@
+body {
+  min-width: 320px;
+}
+
+.head-row {
+  padding-bottom: 30px;
+}
+
+.head-row--gradient {
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+.head-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.head-icon__wrapper {
+  height: 30px;
+  width: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.head-icon__stick {
+  fill: #fff;
+  position: absolute;
+  top: -20px;
+}
+
+.head-icon__stick-left {
+  right: 30px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.head-icon__stick-right {
+  left: 30px;
+}
+
+.head-icon__stick--black {
+  fill: #1F1F22;
+}
+
+.head-title {
+  color: #fff;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.head-title--black {
+  color: #1F1F22;
+}
+
+.main-col__video {
+  margin-bottom: 30px;
+}
+
+.main-video {
+  width: 100%;
+  height: 100%;
+}
+
+.main-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.main-text {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.main-text--bold {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 @font-face {
   font-family: 'ProximaNova';
   font-style: normal;
@@ -30,14 +118,6 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-body {
-  min-width: 320px;
-}
-
-.bg {
-  background: #000;
 }
 
 .page-header__wrapper {
@@ -234,9 +314,13 @@ body {
   margin-bottom: 30px;
 }
 
-.btn-primary--icon-heart::before {
+.icon__heart {
   margin-right: 15px;
-  content: '<3';
+}
+
+.btn-primary--icon-down {
+  border: none;
+  background: transparent;
 }
 
 .icon__arrow {
@@ -267,30 +351,6 @@ body {
   padding-bottom: 15px;
 }
 
-.head-row {
-  padding-top: 30px;
-  padding-bottom: 15px;
-}
-
-.head-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.head-title {
-  color: #fff;
-  font-size: 27px;
-  font-weight: bold;
-}
-
 .adventages__col {
   text-align: center;
   padding: 0 10px;
@@ -305,9 +365,28 @@ body {
   color: #fff;
   font-size: 13px;
   padding: 15px 0px;
+  font-weight: bold;
+}
+
+.adventages__p {
+  color: #fff;
+  font-size: 14px;
+}
+
+.about__video {
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 369px) {
+  .main-title {
+    font-size: 18px;
+  }
+
+  .main-text {
+    font-size: 16px;
+  }
+
   .site-list__item-logo--svg {
     height: 170px;
     width: 170px;
@@ -338,6 +417,10 @@ body {
 }
 
 @media (min-width: 540px) {
+  .head-title {
+    font-size: 36px;
+  }
+
   .site-list__item-logo--svg {
     height: 250px;
     width: 250px;
@@ -357,10 +440,20 @@ body {
 
   .adventages__sub-title {
     font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
   }
 }
 
 @media (min-width: 768px) {
+  .main-title {
+    font-size: 20px;
+  }
+
+  .main-text {
+    font-size: 18px;
+  }
+
   .header-offer__h2 {
     font-size: 72px;
   }
@@ -374,7 +467,13 @@ body {
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 992px) {
+  .main-col__text--order-1 {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+
   .page-header__wrapper {
     padding: 0;
   }
@@ -430,6 +529,19 @@ body {
             flex-grow: 3;
   }
 }
+
+@media (min-width: 1200px) {
+  .main-video {
+    width: 550px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 770px) {
+  .head-icon__wrapper {
+    display: none;
+  }
+}
 @supports (-webkit-appearance:none){
 
 }
@@ -466,7 +578,23 @@ body {
 
 }
 
- @media (min-width: 960px){
+ @media (min-width: 992px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (min-width: 1200px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 770px){
 
 @supports (-webkit-appearance:none){
 

@@ -1,0 +1,124 @@
+// Глобально
+body {
+    min-width: 320px;
+}
+
+// Внутрение отступы для заголовка
+.head-row {
+	padding-bottom: 30px;
+}
+.head-row--gradient {
+	padding-top: 30px;
+	padding-bottom: 45px;
+}
+
+// Выравниваем блок по центру
+.head-col {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+// ограничиваем высоту обертки иконок
+.head-icon__wrapper {
+	height: 30px;
+	width: 100px;
+	overflow: hidden;
+	position: relative;
+}
+@media (max-width: 770px)  {
+	.head-icon__wrapper {
+		display: none;
+	}
+}
+// Иконки ветки
+.head-icon__stick {
+	fill: #fff;
+	position: absolute;
+	top: -20px;
+}
+.head-icon__stick-left {
+	right: 30px;
+	transform: rotateY(180deg);
+}
+.head-icon__stick-right {
+	left: 30px;
+}
+.head-icon__stick--black {
+	fill: #1F1F22;
+}
+
+// Заголовок
+.head-title {
+	color: #fff;
+	font-size: 27px;
+	font-weight: bold;
+}
+@media (min-width: @iphone-plus) {
+	.head-title {
+		font-size: 36px;
+	}
+}
+.head-title--black {
+	color: #1F1F22;
+}
+
+// Колонка видео
+.main-col__video {
+	margin-bottom: 30px;
+}
+
+// Видео
+.main-video {
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width: 1200px) {
+	.main-video {
+		width: 550px;
+		height: 300px;
+	}
+}
+
+// Основные текста 
+.main-title {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+@media (min-width: @iphone-6) {
+	.main-title {
+		font-size: 18px;
+	}
+}
+@media (min-width: @ipad) {
+	.main-title {
+		font-size: 20px;
+	}
+}
+.main-text {
+	margin-bottom: 15px;
+	font-size: 14px;
+}
+@media (min-width: @iphone-6) {
+	.main-text {
+		font-size: 16px;
+	}
+}
+@media (min-width: @ipad) {
+	.main-text {
+		font-size: 18px;
+	}
+}
+.main-text--bold {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+// Замена ордера на декстопе
+@media (min-width: @desktop-width) {
+	.main-col__text--order-1 {
+		order: -1;
+	}
+}
