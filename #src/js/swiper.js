@@ -4,12 +4,6 @@ var mySwiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -27,6 +21,9 @@ var mySwiper = new Swiper('.swiper-container', {
       slidesPerView: 2,
     },
     992: {
+      slidesPerView: 3,
+    },
+    1200: {
       slidesPerView: 4,
     }
   }

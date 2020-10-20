@@ -279,6 +279,7 @@ body {
 
 .site-list__link {
   width: 100%;
+  font-size: 18px;
   text-decoration: none;
   color: #fff;
 }
@@ -378,6 +379,15 @@ body {
 .about__video {
   width: 100%;
   height: 100%;
+}
+
+.swiper-slide__img {
+  width: 100%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #ABABAB;
 }
 
 @media (min-width: 369px) {
