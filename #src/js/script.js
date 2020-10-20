@@ -1,4 +1,4 @@
 @@include('main__nav.js')
-@@include('header--color.js')
 @@include('webp.js')
-// @@include('swiper.js')
+@@include('../../node_modules/swiper/swiper-bundle.js')
+@@include('swiper.js')
