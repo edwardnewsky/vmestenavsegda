@@ -2,6 +2,11 @@ body {
   min-width: 320px;
 }
 
+.main-container {
+  padding-top: 60px;
+  padding-bottom: 15px;
+}
+
 .head-row {
   padding-bottom: 30px;
 }
@@ -344,11 +349,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.adventages__container {
-  padding-top: 60px;
-  padding-bottom: 15px;
 }
 
 .adventages__col {
