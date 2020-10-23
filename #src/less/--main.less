@@ -9,6 +9,11 @@ body {
 	padding-bottom: 15px; 
 }
 
+// Выравнваем колонки для десктопа по горизонтали
+.about__row {
+	// align-items: center;
+}
+
 // Внутрение отступы для заголовка
 .head-row {
 	padding-bottom: 30px;
@@ -127,4 +132,21 @@ body {
 	.main-col__text--order-1 {
 		order: -1;
 	}
+}
+
+// Кнопка основного блока
+.main-col__btn {
+	display: flex;
+	justify-content: center;
+}
+// Кнопка черная
+.btn-primary--black {
+	margin-top: 30px;
+    border: 1px solid #000 !important; 
+    color: #000;
+    background: transparent;
+    &:hover,
+    &:active {
+    	color: #000;
+    }
 }

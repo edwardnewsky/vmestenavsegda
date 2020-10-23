@@ -93,6 +93,27 @@ body {
   font-weight: bold;
 }
 
+.main-col__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-primary--black {
+  margin-top: 30px;
+  border: 1px solid #000 !important;
+  color: #000;
+  background: transparent;
+}
+
+.btn-primary--black:hover,
+.btn-primary--black:active {
+  color: #000;
+}
+
 @font-face {
   font-family: 'ProximaNova';
   font-style: normal;
@@ -326,9 +347,9 @@ body {
   margin-right: 15px;
 }
 
-.btn-primary--icon-down {
-  border: none;
-  background: transparent;
+.btn-primary--more {
+  background: transparent !important;
+  border: none !important;
 }
 
 .icon__arrow {
