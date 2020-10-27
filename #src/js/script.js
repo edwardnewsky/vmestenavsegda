@@ -2,3 +2,4 @@
 @@include('webp.js')
 @@include('../../node_modules/swiper/swiper-bundle.js')
 @@include('swiper.js')
+@@include('value.js')
