@@ -540,8 +540,12 @@ body {
      object-fit: contain;
 }
 
-.main-text--center {
-  text-align: center;
+.partners-offer {
+  margin-top: 30px;
+}
+
+.parents-offer__container {
+  margin-bottom: 30px;
 }
 
 @media (min-width: 369px) {
@@ -713,6 +717,13 @@ body {
 
   .reviews__swiper-buttons {
     display: none;
+  }
+
+  .partners-offer--order-1 {
+    margin-top: 0;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
 }
 
