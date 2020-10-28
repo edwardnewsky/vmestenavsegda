@@ -6,7 +6,7 @@ body {
 // Общий контейнер
 .main-container {
 	padding-top: 60px;
-	padding-bottom: 15px; 
+	padding-bottom: 30px; 
 }
 
 // Выравнваем колонки для десктопа по горизонтали
@@ -77,7 +77,19 @@ body {
 // Колонка видео
 .main-col__video {
 	margin-bottom: 30px;
+	display: flex;
 }
+
+// По углам на 2 колонки
+@media (min-width: @desktop-width) {
+	.main-col__video--right {
+		justify-content: flex-end;
+	}
+	.main-col__video--left {
+		justify-content: flex-start;
+	}
+}
+
 
 // Видео
 .main-video {

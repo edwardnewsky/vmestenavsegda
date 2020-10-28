@@ -6,7 +6,7 @@ body {
 
 .main-container {
   padding-top: 60px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 
 .head-row {
@@ -70,6 +70,9 @@ body {
 
 .main-col__video {
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main-video {
@@ -439,10 +442,10 @@ body {
 }
 
 .reviews__wrapper {
-  padding: 30px 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.9)), color-stop(12%, rgba(0, 0, 0, 0.8)), color-stop(88%, rgba(0, 0, 0, 0.7)), to(rgba(255, 255, 255, 0.9))), url("../img/reviews-bg.jpg");
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.9) 0, rgba(0, 0, 0, 0.8) 12%, rgba(0, 0, 0, 0.7) 88%, rgba(255, 255, 255, 0.9) 100%), url("../img/reviews-bg.jpg");
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0, rgba(0, 0, 0, 0.8) 12%, rgba(0, 0, 0, 0.7) 88%, rgba(255, 255, 255, 0.9) 100%), url("../img/reviews-bg.jpg");
+  padding-bottom: 30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/reviews-bg.jpg");
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg.jpg");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg.jpg");
   position: relative;
 }
 
@@ -544,10 +547,6 @@ body {
   margin-top: 30px;
 }
 
-.parents-offer__container {
-  margin-bottom: 30px;
-}
-
 @media (min-width: 369px) {
   .main-title {
     font-size: 18px;
@@ -643,6 +642,18 @@ body {
 }
 
 @media (min-width: 992px) {
+  .main-col__video--right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .main-col__video--left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
   .main-col__text--order-1 {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
@@ -733,9 +744,9 @@ body {
   }
 }
 @supports (-webkit-appearance:none){
-.reviews__wrapper{background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.9)), color-stop(12%, rgba(0, 0, 0, 0.8)), color-stop(88%, rgba(0, 0, 0, 0.7)), to(rgba(255, 255, 255, 0.9))), url("../img/reviews-bg.webp")}
-.reviews__wrapper{background-image:-o-linear-gradient(top, rgba(255, 255, 255, 0.9) 0, rgba(0, 0, 0, 0.8) 12%, rgba(0, 0, 0, 0.7) 88%, rgba(255, 255, 255, 0.9) 100%), url("../img/reviews-bg.webp")}
-.reviews__wrapper{background-image:linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0, rgba(0, 0, 0, 0.8) 12%, rgba(0, 0, 0, 0.7) 88%, rgba(255, 255, 255, 0.9) 100%), url("../img/reviews-bg.webp")}
+.reviews__wrapper{background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/reviews-bg.webp")}
+.reviews__wrapper{background-image:-o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg.webp")}
+.reviews__wrapper{background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg.webp")}
 .swiper-slide--absolute{background-image:url(../img/reviews__sprite.webp)}
 }
 
