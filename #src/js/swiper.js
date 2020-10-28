@@ -1,6 +1,5 @@
 var mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
-  // direction: 'vertical',
   slidesPerView: 1,
   loop: true,
 
@@ -10,10 +9,7 @@ var mySwiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 
-  // Навигация
-  autoplay: {
-    delay: 3000,
-  },
+
 
   // Адаптивность - mobiles first
   breakpoints: {
@@ -25,6 +21,29 @@ var mySwiper = new Swiper('.swiper-container', {
     },
     1200: {
       slidesPerView: 4,
+    }
+  }
+
+})
+
+var mySwiperPartners = new Swiper('.swiper-container--partners', {
+  // Optional parameters
+  slidesPerView: 1,
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // Адаптивность - mobiles first
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
     }
   }
 

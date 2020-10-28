@@ -534,6 +534,16 @@ body {
   opacity: 1;
 }
 
+.swiper-slide__img--partners {
+  text-align: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.main-text--center {
+  text-align: center;
+}
+
 @media (min-width: 369px) {
   .main-title {
     font-size: 18px;
@@ -689,12 +699,20 @@ body {
         -ms-flex-positive: 3;
             flex-grow: 3;
   }
+
+  .partners__swiper-buttons {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
   .main-video {
     width: 550px;
     height: 300px;
+  }
+
+  .reviews__swiper-buttons {
+    display: none;
   }
 }
 
