@@ -1,0 +1,43 @@
+.contacts__wrapper {
+	position: relative;
+}
+
+.contacts__col {
+	margin-bottom: 30px;
+}
+@media (min-width: @desktop-width) {
+	.contacts__col {
+		z-index: -1;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.contacts__map-img {
+	    position: absolute;
+	    left: 0;
+	    height: 100%;
+	    top: 0;
+	    object-fit: cover;
+	    width: 100%;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.contacts__col--desktop {
+		background-color: #fff;
+		border-radius: 35px;
+    	padding: 35px;
+	}
+}
+
+// Меняем цвет для десктопа+ шапки блока
+@media (min-width: @desktop-width) {
+	.head-icon__stick--black--switch {
+		fill: #fff;
+	}
+	.head-title--black-switch {
+		color: #fff;
+	}
+}
