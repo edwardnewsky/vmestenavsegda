@@ -74,6 +74,18 @@
         padding: 0 15px;
     }
 }
+@media (min-width: 320px) and (max-width: @desktop-width) and (orientation: landscape) and (max-height: @iphone-plus) {
+   .main-nav__list {
+        flex-wrap: wrap;
+        text-align: center;
+   }
+   .site-list__item-logo {
+        flex: 0 1 100%;
+   }
+   .site-list__item {
+        flex-grow: 1;
+   }
+}
 
 // Лого сайта
 #logo-ru {
@@ -98,6 +110,12 @@
     height: 250px;
     width: 250px;
   } 
+}
+@media (min-width: 320px) and (max-width: @desktop-width) and (orientation: landscape) and (max-height: @iphone-plus) {
+   .site-list__item-logo--svg {
+    height: 100px;
+    width: 100px;
+  }  
 }
 
 
@@ -212,6 +230,13 @@
     }
 }
 
+// поворот экрана
+@media (min-width: 320px) and (max-width: @desktop-width) and (orientation: landscape) and (max-height: @iphone-plus) {
+   .site-list {
+    flex-direction: row;
+   } 
+}
+
 // Расширяем list-link на всю ширину
 .site-list__link {
     width: 100%;
@@ -219,6 +244,11 @@
     text-decoration: none;
 
     color: #fff;
+    &:hover,
+    &:active {
+        color: #fff;
+        border-bottom: solid 1px #fff;
+    }
 }
 
 .site-list__item {

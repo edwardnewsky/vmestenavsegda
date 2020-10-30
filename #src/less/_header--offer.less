@@ -44,6 +44,15 @@
 	    font-size: 50px;
 	}
 }
+@media (min-width: 320px) and (max-width: @desktop-width) and (orientation: landscape) and (max-height: @iphone-plus) {
+	.header-offer__h2 {
+		margin-top: 10px;
+	    font-size: 20px;
+	}
+	.header-offer__h2--small {
+	    font-size: 14px;
+	}
+}
 
 // Нижний текст
 .header-offer__h1 {
@@ -65,6 +74,14 @@
 @media (min-width: @ipad) {
 	.header-offer__h1 {
 	    font-size: 32px;
+	}
+}
+
+@media (min-width: 320px) and (max-width: @desktop-width) and (orientation: landscape) and (max-height: @iphone-plus) {
+	.header-offer__h1 {
+	    font-size: 14px;
+		margin-top: 10px;
+		margin-bottom: 10px;	
 	}
 }
 
