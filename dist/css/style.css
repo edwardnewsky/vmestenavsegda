@@ -567,6 +567,22 @@ body {
   margin-bottom: 30px;
 }
 
+.footer__wrapper {
+  background-color: #000;
+}
+
+.footer__container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer__list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @media (min-width: 369px) {
   .main-title {
     font-size: 18px;
