@@ -121,12 +121,6 @@ body {
   color: #000;
 }
 
-.main-text--link {
-  text-decoration: none;
-  color: #fff;
-  border-bottom: solid 1px #fff;
-}
-
 @font-face {
   font-family: 'ProximaNova';
   font-style: normal;
@@ -571,6 +565,11 @@ body {
 
 .contacts__col {
   margin-bottom: 30px;
+  padding: 0;
+}
+
+.main-title--margin {
+  margin-bottom: 5px;
 }
 
 .footer__wrapper {
@@ -604,17 +603,11 @@ body {
   color: #fff;
 }
 
-.footer__list-item--left {
-  -moz-text-align-last: left;
-       text-align-last: left;
-}
-
-.footer__list-item--right {
-  text-align: right;
+.footer__list-item--margin {
+  margin: 15px 0;
 }
 
 .footer__logo {
-  margin-top: 30px;
   fill: #fff;
 }
 
@@ -629,6 +622,51 @@ body {
 
 .footer__text--link:hover {
   border-bottom: solid 1px #fff;
+}
+
+.modal-header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+.modal-header--relative {
+  position: relative;
+  padding: 30px;
+}
+
+.btn-clouse--absolute {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  opacity: 1;
+}
+
+.head-title--modal {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main-title--margin {
+  margin-bottom: 5px;
+}
+
+.form-control--margin {
+  margin-bottom: 15px;
+}
+
+.modal-text--alert {
+  font-size: 11px;
+}
+
+.modal__btn--center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 369px) {
@@ -656,6 +694,10 @@ body {
   .adventages__sub-title {
     font-size: 15px;
   }
+
+  .modal-text--alert {
+    font-size: 13px;
+  }
 }
 
 @media (min-width: 414px) {
@@ -666,6 +708,10 @@ body {
 
   .adventages__sub-title {
     font-size: 17px;
+  }
+
+  .modal-text--alert {
+    font-size: 14px;
   }
 }
 
@@ -700,6 +746,16 @@ body {
   .reviews__container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .modal-header--relative {
+    padding: 60px;
+  }
+}
+
+@media (min-width: 576px) {
+  .contacts__col {
+    padding: 0 15px;
   }
 }
 
@@ -847,8 +903,17 @@ body {
             justify-content: space-between;
   }
 
-  .footer__logo {
-    margin-top: auto;
+  .footer__list-item--left {
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+
+  .footer__list-item--right {
+    text-align: right;
+  }
+
+  .footer__list-item--margin {
+    margin: auto;
   }
 }
 
@@ -903,6 +968,14 @@ body {
 }
 
  @media (min-width: 540px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (min-width: 576px){
 
 @supports (-webkit-appearance:none){
 

@@ -4,7 +4,15 @@
 
 .contacts__col {
 	margin-bottom: 30px;
+	padding: 0;
 }
+
+@media (min-width: 576px) {
+	.contacts__col {
+		padding: 0 15px;
+	}
+}
+
 @media (min-width: @desktop-width) {
 	.contacts__col {
 		z-index: -1;
@@ -30,6 +38,10 @@
 		border-radius: 35px;
     	padding: 35px;
 	}
+}
+
+.main-title--margin {
+	margin-bottom: 5px;
 }
 
 // Меняем цвет для десктопа+ шапки блока

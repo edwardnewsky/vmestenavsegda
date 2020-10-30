@@ -28,24 +28,29 @@
 	width: 210px;
 	color: #fff;
 }
-
-.footer__list-item--left {
+@media (min-width: @desktop-width) {
+	.footer__list-item--left {
 	text-align-last: left;
+	}
+
+	.footer__list-item--right {
+		text-align: right;
+	}
 }
 
-.footer__list-item--right {
-	text-align: right;
+.footer__list-item--margin {
+	margin: 15px 0;
+}
+@media (min-width: @desktop-width) {
+	.footer__list-item--margin {
+	margin: auto;
+	}
 }
 
 .footer__logo {
-	margin-top: 30px;
 	fill: #fff;
 }
-@media (min-width: @desktop-width) {
-	.footer__logo {
-	margin-top: auto;
-	}
-}
+
 
 .footer__text {
 	font-size: 14px;
