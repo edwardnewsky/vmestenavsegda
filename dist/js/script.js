@@ -9484,7 +9484,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
 function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
   const step = (timestamp) => {
@@ -9499,17 +9498,35 @@ function animateValue(obj, start, end, duration) {
 }
 
 if (obj = document.getElementById("value-25000")) {
-	animateValue(obj, 0, 25000, 2000);
+  animateValue(obj, 0, 25000, 2000);
 }
 
 if (obj = document.getElementById("value-500")) {
-	animateValue(obj, 0, 500, 2000);
+  animateValue(obj, 0, 500, 2000);
 }
 
 if (obj = document.getElementById("value-30")) {
-	animateValue(obj, 0, 30, 2000);
+  animateValue(obj, 0, 30, 2000);
 }
 
 if (obj = document.getElementById("value-10")) {
-	animateValue(obj, 0, 10, 2000);
-};
+  animateValue(obj, 0, 10, 2000);
+}
+
+
+
+
+ 
+var months    = ['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'];
+var now       = new Date();
+var thisMonth = months[now.getMonth()]; // getMonth method returns the month of the date (0-January :: 11-December)
+var output = document.getElementById('output');
+console.log(thisMonth);
+
+ if(output.textContent !== undefined) {
+    output.textContent = thisMonth;
+  }
+  else {
+    output.innerText = thisMonth;
+  };
+// Libs

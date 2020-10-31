@@ -7,6 +7,7 @@
     "urix": "^0.1.0"
   },
   "devDependencies": {
+    "animate.css": "^4.1.1",
     "browser-sync": "^2.26.12",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -25,7 +26,8 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
-    "swiper": "^6.3.4"
+    "swiper": "^6.3.4",
+    "wow.js": "^1.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
