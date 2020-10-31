@@ -47,4 +47,4 @@ var mySwiperPartners = new Swiper('.swiper-container--partners', {
     }
   }
 
-})
+});
