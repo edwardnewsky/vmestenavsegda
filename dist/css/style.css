@@ -109,18 +109,6 @@ body {
           justify-content: center;
 }
 
-.btn-primary--black {
-  margin-top: 30px;
-  border: 1px solid #000 !important;
-  color: #000;
-  background: transparent;
-}
-
-.btn-primary--black:hover,
-.btn-primary--black:active {
-  color: #000;
-}
-
 @font-face {
   font-family: 'ProximaNova';
   font-style: normal;
@@ -148,11 +136,26 @@ body {
   padding: 10px 29px;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
   border-color: #fff;
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.btn-primary--black {
+  margin-top: 30px;
+  border: 1px solid #000 !important;
+  color: #000;
+  background: transparent;
+}
+
+.btn-primary--black:hover,
+.btn-primary--black:active,
+.btn-primary--black:focus {
+  color: #000;
 }
 
 .page-header__wrapper {
