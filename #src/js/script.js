@@ -6,3 +6,6 @@
 @@include('counter.js')
 @@include('dates.js')
 // Libs
+// @@include('wow.min.js')
+@@include('../../node_modules/wow.js/dist/wow.js')
+@@include('wow-init.js')
