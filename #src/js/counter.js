@@ -26,8 +26,3 @@ if (obj = document.getElementById("value-30")) {
 if (obj = document.getElementById("value-10")) {
   animateValue(obj, 0, 10, 2000);
 }
-
-
-
-
- 
