@@ -1,5 +1,7 @@
 @import "../../node_modules/swiper/swiper-bundle.css";
 
+@import "../../node_modules/animate.css/animate.min.css";
+
 body {
   min-width: 320px;
 }
