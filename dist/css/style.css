@@ -161,7 +161,7 @@ body {
 .page-header__wrapper {
   height: 100vh;
   background-color: #7a5c6a;
-  background-image: url('../img/header-bg--desktop.webp');
+  background-image: url('../img/header-bg--desktop-320.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -460,9 +460,9 @@ body {
 
 .reviews__wrapper {
   padding-bottom: 30px;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/reviews-bg.jpg");
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg.jpg");
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/reviews-bg--320.webp");
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg--320.webp");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg--320.webp");
   position: relative;
 }
 
@@ -704,6 +704,10 @@ body {
     font-size: 16px;
   }
 
+  .page-header__wrapper {
+    background-image: url('../img/header-bg--desktop-375.webp');
+  }
+
   .site-list__item-logo--svg {
     height: 170px;
     width: 170px;
@@ -721,6 +725,12 @@ body {
     font-size: 15px;
   }
 
+  .reviews__wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('../img/reviews-bg--375.webp');
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url('../img/reviews-bg--375.webp');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url('../img/reviews-bg--375.webp');
+  }
+
   .modal-text--alert {
     font-size: 13px;
   }
@@ -731,6 +741,10 @@ body {
 }
 
 @media (min-width: 414px) {
+  .page-header__wrapper {
+    background-image: url('../img/header-bg--desktop-414.webp');
+  }
+
   .site-list__item-logo--svg {
     height: 200px;
     width: 200px;
@@ -738,6 +752,18 @@ body {
 
   .adventages__sub-title {
     font-size: 17px;
+  }
+
+  .reviews__wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('../img/reviews-bg--414.webp');
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url('../img/reviews-bg--414.webp');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url('../img/reviews-bg--414.webp');
+  }
+
+  .reviews__wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('../img/reviews-bg--768.webp');
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url('../img/reviews-bg--768.webp');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url('../img/reviews-bg--768.webp');
   }
 
   .modal-text--alert {
@@ -752,6 +778,10 @@ body {
 @media (min-width: 540px) {
   .head-title {
     font-size: 36px;
+  }
+
+  .page-header__wrapper {
+    background-image: url('../img/header-bg--desktop-768.webp');
   }
 
   .site-list__item-logo--svg {
@@ -775,6 +805,12 @@ body {
     font-size: 20px;
     padding-top: 20px;
     padding-bottom: 5px;
+  }
+
+  .reviews__wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('../img/reviews-bg.webp');
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url('../img/reviews-bg.webp');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url('../img/reviews-bg.webp');
   }
 
   .reviews__container {
@@ -840,6 +876,10 @@ body {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+
+  .page-header__wrapper {
+    background-image: url('../img/header-bg--desktop.webp');
   }
 
   .page-header__wrapper {
@@ -1034,9 +1074,6 @@ body {
   }
 }
 @supports (-webkit-appearance:none){
-.reviews__wrapper{background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/reviews-bg.webp")}
-.reviews__wrapper{background-image:-o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg.webp")}
-.reviews__wrapper{background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 100%), url("../img/reviews-bg.webp")}
 .swiper-slide--absolute{background-image:url(../img/reviews__sprite.webp)}
 }
 

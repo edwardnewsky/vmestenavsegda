@@ -4,11 +4,39 @@
 	padding-bottom: 30px;
 	background-image: 
 		linear-gradient(180deg,rgba(0,0,0,.7) 0,rgba(0,0,0,.7) 100%),
-		url("../img/reviews-bg.jpg");
+		url("../img/reviews-bg--320.webp");
 		// Градиент с белыми переходами
 		// linear-gradient(180deg,rgba(255,255,255,.9) 0,rgba(0,0,0,.8) 12%,rgba(0,0,0,.7) 88%,rgba(255,255,255,.9) 100%),
 		// url("../img/reviews-bg.jpg");
 	position: relative;
+}
+@media (min-width: @iphone-6) {
+    .reviews__wrapper {
+       background-image: 
+       linear-gradient(180deg,rgba(0,0,0,.7) 0,rgba(0,0,0,.7) 100%),
+       url('../img/reviews-bg--375.webp');  
+    }
+}
+@media (min-width: @iphone-6-plus) {
+    .reviews__wrapper {
+       background-image: 
+       linear-gradient(180deg,rgba(0,0,0,.7) 0,rgba(0,0,0,.7) 100%),
+       url('../img/reviews-bg--414.webp'); 
+    }
+}
+@media (min-width: @iphone-6-plus) {
+    .reviews__wrapper {
+       background-image: 
+       linear-gradient(180deg,rgba(0,0,0,.7) 0,rgba(0,0,0,.7) 100%),
+       url('../img/reviews-bg--768.webp'); 
+    }
+}
+@media (min-width: @iphone-plus) {
+    .reviews__wrapper {
+       background-image: 
+       linear-gradient(180deg,rgba(0,0,0,.7) 0,rgba(0,0,0,.7) 100%),
+       url('../img/reviews-bg.webp'); 
+    }
 }
 
 .reviews__container {
