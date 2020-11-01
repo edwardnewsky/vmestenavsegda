@@ -15,6 +15,7 @@ let path={
     css: source_folder + "/less/style.less",
     cssLib: source_folder + "/less/**/*.css",
     js: source_folder + "/js/script.js",
+    jsLib: source_folder + "/js/lib/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.{ttf,woff,woff2}",
     video: source_folder + "/video/*.{mp4,webm}",
@@ -115,6 +116,11 @@ function js() {
     .pipe(browsersync.stream())
 }
 
+function jsLib() {
+    return src(path.src.jsLib)
+      .pipe(dest(path.build.js))
+}
+
 function images() {
   return src(path.src.img)
     .pipe(
@@ -185,7 +191,7 @@ function clean(param) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, video, cssLib));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, video, cssLib, jsLib));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.video = video;
