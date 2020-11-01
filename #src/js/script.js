@@ -1,6 +1,6 @@
 @@include('main__nav.js')
 @@include('webp.js')
-@@include('../../node_modules/swiper/swiper-bundle.js')
+@@include('swiper-bundle.min.js')
 @@include('swiper.js')
 @@include('anchor-scroll.js')
 @@include('counter.js')

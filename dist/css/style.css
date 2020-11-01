@@ -1,6 +1,16 @@
-@import "../../node_modules/swiper/swiper-bundle.css";
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 
-@import "../../node_modules/animate.css/animate.min.css";
+video {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
 
 body {
   min-width: 320px;
@@ -163,7 +173,6 @@ body {
 .page-header__wrapper {
   height: 100vh;
   background-color: #7a5c6a;
-  background-image: url('../img/header-bg--desktop-320.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -190,6 +199,16 @@ body {
   background: -webkit-gradient(linear, left bottom, left top, from(#7a5c6a), color-stop(10%, rgba(147, 128, 138, 0.3)), to(rgba(0, 0, 0, 0.5)));
   background: -o-linear-gradient(bottom, #7a5c6a 0%, rgba(147, 128, 138, 0.3) 10%, rgba(0, 0, 0, 0.5) 100%);
   background: linear-gradient(0deg, #7a5c6a 0%, rgba(147, 128, 138, 0.3) 10%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.header__img--wrapper {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header-fix {
@@ -226,6 +245,10 @@ body {
 
 .main-nav {
   padding: 0;
+}
+
+.main-nav__logo {
+  z-index: 1;
 }
 
 #logo-ru {
@@ -722,10 +745,6 @@ body {
     font-size: 16px;
   }
 
-  .page-header__wrapper {
-    background-image: url('../img/header-bg--desktop-375.webp');
-  }
-
   .site-list__item-logo--svg {
     height: 170px;
     width: 170px;
@@ -759,10 +778,6 @@ body {
 }
 
 @media (min-width: 414px) {
-  .page-header__wrapper {
-    background-image: url('../img/header-bg--desktop-414.webp');
-  }
-
   .site-list__item-logo--svg {
     height: 200px;
     width: 200px;
@@ -796,10 +811,6 @@ body {
 @media (min-width: 540px) {
   .head-title {
     font-size: 36px;
-  }
-
-  .page-header__wrapper {
-    background-image: url('../img/header-bg--desktop-768.webp');
   }
 
   .site-list__item-logo--svg {
@@ -894,10 +905,6 @@ body {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-  }
-
-  .page-header__wrapper {
-    background-image: url('../img/header-bg--desktop.webp');
   }
 
   .page-header__wrapper {

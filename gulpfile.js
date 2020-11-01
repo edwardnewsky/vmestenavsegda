@@ -13,6 +13,7 @@ let path={
   src:{
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     css: source_folder + "/less/style.less",
+    cssLib: source_folder + "/less/**/*.css",
     js: source_folder + "/js/script.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.{ttf,woff,woff2}",
@@ -91,6 +92,11 @@ function css() {
       )
       .pipe(dest(path.build.css))
       .pipe(browsersync.stream())
+}
+
+function cssLib() {
+    return src(path.src.cssLib)
+      .pipe(dest(path.build.css))
 }
 
 function js() {
@@ -179,7 +185,7 @@ function clean(param) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, video));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, video, cssLib));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.video = video;
