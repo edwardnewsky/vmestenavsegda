@@ -45,7 +45,11 @@
       new WOW().init();
     </script>
     <script type="text/javascript" src="js/micromodal.min.js"></script>
-    <script>MicroModal.init();</script>
+    <script>
+      MicroModal.init();
+      MicroModal.show('modal-id'); // [1]
+      MicroModal.close('modal-id'); // [2]
+    </script>
 
   </body>
 </html>
