@@ -1012,7 +1012,7 @@ body {
   .contacts__col--desktop {
     background-color: #fff;
     border-radius: 35px;
-    padding: 35px;
+    padding: 35px !important;
   }
 
   .head-icon__stick--black--switch {
