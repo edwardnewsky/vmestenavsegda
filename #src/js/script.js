@@ -5,3 +5,5 @@
 @@include('dates.js')
 @@include('lazy-ivan.js')
 @@include('modal.js')
+@@include('aos.js')
+@@include('aos__init.js')
