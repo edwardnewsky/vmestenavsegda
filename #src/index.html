@@ -3,15 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <title>Знакомства для серьезных отношений в Москве - «Вместе Навсегда»</title>
     <meta name="description" content="Служба знакомств для серьезных любовных отношений. Деловые знакомства с реальными мужчинами и девушками. Найти солидного мужа и хорошую жену в Москве.">
     <meta name="keywords" content="Вместе Навсегда, Служба закомств, Служба знакомств Москва, Знакомства в Москве, Знакомства для отношений, Свидания в Москве, Найти мужа, Найти жену, Клуб знакомств">
-
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-
     <link rel="stylesheet" type="text/css" href="css/lib/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="stylesheet" type="text/css" href="css/lib/bootstrap-grid.min.css">
@@ -39,17 +34,18 @@
     @@include('_modal.html')
 
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="js/script.min.js"></script>
+
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script>
       new WOW().init();
     </script>
     <script type="text/javascript" src="js/micromodal.min.js"></script>
     <script>
-      MicroModal.init();
-      MicroModal.show('modal-id'); // [1]
-      MicroModal.close('modal-id'); // [2]
+      MicroModal.init({
+        awaitCloseAnimation: true
+      });
     </script>
+        <script type="text/javascript" src="js/script.min.js"></script>
 
   </body>
 </html>

@@ -4,3 +4,4 @@
 @@include('anchor-scroll.js')
 @@include('dates.js')
 @@include('lazy-ivan.js')
+@@include('modal.js')
