@@ -1,19 +1,31 @@
 <div class="modal micromodal-slide" id="modalCallMe" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-      <header class="modal__header">
-        <h2 class="modal__title">
-          Micromodal
-        </h2>
-        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-      </header>
+      <div class="modal__header modal-header--relative">
+        <h2 class="head-title head-title--black head-title--modal">Оставить запрос</h2>
+        <button class="modal__close btn-clouse--absolute" aria-label="Close modal" data-micromodal-close></button>
+      </div>
       <div class="modal-content-content">
         <div class="modal__content">
-          Modal content
+          <form>
+            <div class="col-12 modal__content--margin">
+              <label class="main-title main-title--margin col-12" for="InputName" >Ваше имя</label>
+              <input class="form-control form-control--margin col-12" type="text" id="InputName" minlength="2" maxlength="20" aria-label="Пожалуйста введите Ваше имя" required>
+            </div>
+            <div class="col-12 modal__content--margin">
+              <label class="main-title main-title--margin col-12" for="InputPhone">Ваш телефон</label>
+              <input class="form-control form-control--margin col-12" type="tel" id="InputPhone" aria-label="Пожалуйста введите Ваш номер телефона" required>
+            </div>
+            <div class="col-12">
+              <p class="modal-text--alert">
+                Нажимая кнопку "Отправить" Вы соглашаетесь с политикой конфиденциальности сайта.
+              </p>
+            </div>
+            <div class="col-12 modal__btn--center">
+              <button type="submit" class="btn btn-primary btn-primary--black btn-primary--modal">Отправить</button>
+            </div>
+          </form>
         </div>
-        <footer class="modal__footer">
-          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-        </footer>
       </div>
     </div>
   </div>
@@ -30,7 +42,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content modal-header--relative">
       
-		<h2 class="head-title head-title--black head-title--modal">Оставить запрос</h2>
+		
         <button type="button" class="btn-close btn-clouse--absolute" data-dismiss="modal" aria-label="Close"></button>
 		<form>
 			<div class="col-12">
