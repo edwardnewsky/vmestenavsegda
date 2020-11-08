@@ -18,7 +18,10 @@
 		<div class="about__row row">
 			<div class="contacts__col col-12">
 				<div class="contacts__map">
-					<img class="contacts__map-img" data-lazy data-src="img/contacts__map--mobile.jpg" data-loader-class="img-loader2" width="100%">
+					<picture>
+		                <source data-srcset="img/contacts__map--mobile.webp" type="image/webp">
+		                <img class="contacts__map-img lazy" data-src="img/contacts__map--mobile.jpg" alt="Карта" width="100%">
+		            </picture>
 				</div>
 			</div>
 			<div class="contacts__col--desktop col-12 col-lg-6" 

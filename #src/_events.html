@@ -21,12 +21,13 @@
 		data-aos-duration="1000"
     	data-aos="fade-in"
     	data-aos-easing="ease-in-quad">
-			<video class="video1 main-video" 
-			data-lazy data-loader-class="video-loader" 
-			data-src-webm="../video/video__events.webm" 
-			data-src-mp4="../video/video__events.mp4"  
-			title="Танцующие сердца" playsinline autoplay muted loop 
-			width="550px" height="300px"></video>
+    		<video class="main-video lazy"
+			data-src="video/video__events.mp4" 
+			title="Танцующие сердца" 
+			playsinline autoplay muted loop 
+			width="550px" height="300px">
+				<source type="video/webm" data-src="video/video__events.webm">
+			</video>
 		</div>
 		<div class="about__col main-col__text--order-1 main-col-text col-12 col-lg-6" 
 		data-aos-duration="1000"

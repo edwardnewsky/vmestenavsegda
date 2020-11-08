@@ -5,3 +5,4 @@
 @@include('modal.js')
 @@include('aos.js')
 @@include('aos__init.js')
+@@include('lazyload__init.js')
