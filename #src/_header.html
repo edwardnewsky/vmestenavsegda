@@ -1,6 +1,25 @@
 <div class="page-header__wrapper container-fluid" id="start">
   <div class="header__img--wrapper">
-    <img class="header__img--bg" src="img/header-bg--desktop.png" alt="Помолвка">
+    <picture>
+      <source srcset="img/header-bg--desktop-320.webp" 
+        media="(min-width: @iphone-5)" type="image/webp">
+      <source srcset="img/header-bg--desktop-320.png" 
+        media="(min-width: @iphone-5)">
+      <source srcset="img/header-bg--desktop-375.webp" 
+        media="(min-width: @iphone-6)" type="image/webp">
+      <source srcset="img/header-bg--desktop-375.png" 
+        media="(min-width: @iphone-6)">
+      <source srcset="img/header-bg--desktop-414.webp" 
+        media="(min-width: @iphone-6-plus)" type="image/webp">
+      <source srcset="img/header-bg--desktop-414.png" 
+        media="(min-width: @iphone-6-plus)">
+      <source srcset="img/header-bg--desktop-768.webp" 
+        media="(min-width: @iphone-plus)" type="image/webp">
+      <source srcset="img/header-bg--desktop-768.png" 
+        media="(min-width: @iphone-plus)">
+      <source srcset="img/header-bg--desktop.webp" type="image/webp">
+      <img class="header__img--bg" src="img/header-bg--desktop.png" alt="Помолвка">
+    </picture>
   </div>
 <section class="header-fix container-fluid">
   <header class="page-header">
